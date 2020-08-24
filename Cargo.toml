@@ -1,0 +1,17 @@
+[package]
+name = "deno_tauri"
+version = "0.1.0"
+authors = ["justjavac <justjavac@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+deno_core = "0.53.0"
+tauri = "0.9.2"
+
+[profile.release]
+codegen-units = 1
+lto = true
+panic = "abort"
